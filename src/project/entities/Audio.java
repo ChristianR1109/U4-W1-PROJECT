@@ -34,7 +34,7 @@ public class Audio extends Element implements Playable, Execute {
         do {
             System.out.println("Inserisci 1 se desideri aumentare il volume.");
             System.out.println("Inserisci 2 se desideri diminuire il volume.");
-            System.out.println("inserisci 0 se desideri continuare il prossimo elemento oppure uscire dal programma.");
+            System.out.println("inserisci 0 se desideri continuare.");
             index = Integer.parseInt(scanner.nextLine());
             if (index < 0 || index > 2) {
                 System.out.println("Il valore inserito non è compreso nel range fornito, riprova.");
