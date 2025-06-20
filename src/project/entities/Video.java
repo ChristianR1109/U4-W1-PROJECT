@@ -250,4 +250,9 @@ public class Video extends Element implements Playable, Adjustable, Execute {
     public void exe() {
         play();
     }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
 }

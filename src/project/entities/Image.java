@@ -128,4 +128,9 @@ public class Image extends Element implements Adjustable, Execute {
     public void exe() {
         Show();
     }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
 }

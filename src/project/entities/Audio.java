@@ -134,4 +134,9 @@ public class Audio extends Element implements Playable, Execute {
     public void exe() {
         play();
     }
+
+    @Override
+    public String getTitle() {
+        return title;
+    }
 }
