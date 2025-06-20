@@ -78,12 +78,6 @@ public class Main {
 
         }
 
-        Audio Audio1 = new Audio("Audio 1", 4, 5);
-        Video Video1 = new Video("Video 1", 3, 5, 7);
-        Image Image1 = new Image("Image 1", 3);
-        Image Image2 = new Image("Image 2", 4);
-        Image Image3 = new Image("Image 3", 8);
-
 
         int pos = 0;
         do {
