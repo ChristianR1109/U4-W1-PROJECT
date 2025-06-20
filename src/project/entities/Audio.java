@@ -1,10 +1,11 @@
 package project.entities;
 
+import project.interfaces.Execute;
 import project.interfaces.Playable;
 
 import java.util.Scanner;
 
-public class Audio extends Element implements Playable {
+public class Audio extends Element implements Playable, Execute {
     Scanner scanner = new Scanner(System.in);
     private int time;
     private int volume;
@@ -127,5 +128,10 @@ public class Audio extends Element implements Playable {
 
         }
 
+    }
+
+    @Override
+    public void exe() {
+        play();
     }
 }

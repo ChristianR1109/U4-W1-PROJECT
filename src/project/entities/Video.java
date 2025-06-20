@@ -1,11 +1,12 @@
 package project.entities;
 
 import project.interfaces.Adjustable;
+import project.interfaces.Execute;
 import project.interfaces.Playable;
 
 import java.util.Scanner;
 
-public class Video extends Element implements Playable, Adjustable {
+public class Video extends Element implements Playable, Adjustable, Execute {
     private int time;
     private int volume;
     private int brightness;
@@ -219,7 +220,7 @@ public class Video extends Element implements Playable, Adjustable {
             brightness = 0;
             String brnOut = "";
             for (int i = 0; i < brightness; i++) {
-                brnOut += "!";
+                brnOut += "*";
             }
             System.out.println(title + " " + brnOut + " La luminosità è : " + brightness);
             return;
@@ -228,7 +229,7 @@ public class Video extends Element implements Playable, Adjustable {
 
             int j = 0;
             do {
-                System.out.println("Inserisci il nuovo valore per la luminosità tra " + 0 + " e " + (volume - 1));
+                System.out.println("Inserisci il nuovo valore per la luminosità tra " + 0 + " e " + (brightness - 1));
                 j = Integer.parseInt(scanner.nextLine());
                 if (j < 0 || j >= (brightness)) {
                     System.out.println("Il valore non è compreso nel range, riprova ");
@@ -243,5 +244,10 @@ public class Video extends Element implements Playable, Adjustable {
             return;
 
         }
+    }
+
+    @Override
+    public void exe() {
+        play();
     }
 }
